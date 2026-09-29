@@ -1,0 +1,697 @@
+*{
+    margin: 0; /*Stelt alle margins in op 0*/
+    padding: 0; /*Stelt alle paddings in op 0*/ 
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* NAVIGATIE */ 
+nav{
+    height: 75px;
+    background: #071426;
+    display: flex; /*Meer keuzes bij opmaak*/
+    align-items: center; /*Verticale centrering*/
+    justify-content: space-between; /*Zorgt voor plaats tussen links*/
+    padding: 0 8%; /*Geen padding aan bovenkant maar wel aan zijkant*/
+} 
+
+.logo{
+    color: white; /*Witte letters*/
+    font-size: 25px; /*lettergootte*/
+    font-weight: bold; /*Vetgedrukt*/
+} 
+
+.logo::first-letter{
+    color: #2997ff; /*Eerste letter is blauw*/
+} 
+    
+nav ul {
+    display: flex; /*Meer keuzes bij opmaak*/
+    list-style: none; /*Opsommingsteken weg*/
+    gap: 35px;  /*Ruimte tussen links*/
+} 
+    
+nav ul li a{
+    color: #b9c4d5;
+    text-decoration: none; /*lijn onder tekst weg*/
+    font-size: 16px;
+    transition: 0.3s; /*Zorgt voor een soort "animatie"*/
+} 
+
+nav ul li a:hover, nav ul li a.active{
+    color: #2997ff; 
+}
+
+/*OVER MIJ PAGINA*/
+.about-page{
+    background: #f5f7fb;
+    min-height: calc(100vh - 75px); /*Volledige breedte - 75px*/
+    padding: 80px 20px; /*80px boven/onder en 20 px links/ rechts*/
+}
+
+.about-container{
+    max-width: 1100px;
+    margin: auto; /*Horizontale centrering*/
+    display: grid; /*Zorgt dat een grid mogelijk is*/
+    grid-template-columns: 350px 1fr; /*kolom links heeft vaste breedte van 350px, 2de kolom resterende ruimte*/
+    gap: 70px;  /*Plaats tussen afbeelding en tekst*/
+    align-items: center; /*Verticale centrering*/
+}
+
+/* FOTO */
+
+.about-photo {
+    display: flex;
+    justify-content: center; /*centrering*/
+}
+
+.photo-placeholder {
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden; /*De afbeelding die erin zit wordt ook afgerand*/
+    background: #071426;
+    border: 2px solid #2997ff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /*Lichte schaduw*/
+}
+
+.photo-placeholder img {
+    width: 100%; /*Neemt volledige placeholder in*/
+    height: 100%; /*Neemt volledige placeholder in*/
+    object-fit: cover; /*Zorgt dat de afbeelding er correct uitziet*/
+}
+
+/*TEKST*/
+.about-label{
+    color: #2997ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-content h1{
+    color: #2997ff;
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.intro{
+    color: #657083;
+    font-size: 17px;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+/*KAARTJES*/
+.info-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.info-box{
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    border: 1px solid #e3e7ed;
+    transition: 0.3s;
+}
+
+.info-box:hover{
+    transform: translateY(-4px);
+    border-color: #2997ff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.07);
+}
+
+.info-box h3{
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.info-box p{
+    color: #657083;
+    font-size: 14px;
+}
+
+/*MOTIVATIE*/
+.motivation{
+    max-width: 1100px;
+    margin: 100px auto 0;
+    background: #071426;
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.motivation h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.motivation p:not(.about-label){
+    color: #b9c4d5;
+    max-width: 850px;
+    margin-bottom: 15px;
+}
+/*Hero banner*/
+.hero{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #071426, #0c2543);
+    color: white;
+    padding: 80px 10%;
+}
+
+.hero-content{
+    max-width: 800px;
+}
+
+.small-title, .section-label{
+    color: #2997ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1{
+    font-size: 78px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span{
+    color: #2997ff;
+}
+
+.hero-text{
+    color: #bdc8d8;
+    width: 600px;
+    font-size: 18px;
+}
+
+/*OVER*/
+
+.about{
+    width: 1100px ;
+    margin: auto;
+    padding: 100px 25px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about h2,
+.services h2,
+.location h2 {
+    font-size: 40px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    color: #657083;
+    margin-bottom: 15px;
+}
+
+.about-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #e7ebf2;
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: #657083;
+}
+
+/* SERVICES */
+
+.services {
+    background: #071426;
+    color: white;
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 50px;
+}
+
+.service-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #0d2038;
+    border: 1px solid #193653;
+
+    padding: 35px 25px;
+    border-radius: 18px;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #2997ff;
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #9eacbd;
+    font-size: 14px;
+}
+
+/* LOCATION */
+
+.location {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.location > div:first-child p:last-child {
+    color: #657083;
+}
+
+.location-box {
+    background: white;
+    padding: 35px;
+
+    border-radius: 20px;
+    border: 1px solid #e7ebf2;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.location-box span {
+    font-size: 40px;
+}
+
+.location-box p {
+    color: #657083;
+}
+
+/* FOOTER */
+
+footer {
+    background: #050e1b;
+    color: #7f8da0;
+
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+}
+
+/*Contact sectie*/
+.contact_section{
+    min-height: calc(100vh - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #071426, #0c2543);
+}
+
+/*Contact Formulier*/
+.contact_form{
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25); /*Lichter kleur*/
+}
+
+.contact_form::before{
+    content: "Neem contact op";
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    color: #172033;
+    margin-bottom: 35px;
+}
+
+/*Lables*/
+.contact_form label{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #172033;
+}
+
+/*Inputs*/
+.contact_form input[type="text"], .contact_form input[type="email"],
+.contact_form input[type="tel"], .contact_form textarea{
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 22px;
+    border: 1px solid #dce1e8;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact_form input:focus, .contact_form textarea:focus{
+    border-color: #2997ff;
+    box-shadow: 0 0 0 3px rgba(41, 151, 255, 0.12);
+}
+
+/*Textarea*/
+.contact_form textarea{
+    height: 150px;
+    resize: vertical;
+}
+
+/*Submit*/
+.contact_form input[type="submit"]{
+    width: 100px;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: #2997ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact_form input[type="submit"]:hover{
+    background: #147fd1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(41, 151, 255, 0.3);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    /* Navigatie */
+    nav {
+        padding: 0 5%;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    /* Hero */
+    .hero {
+        height: auto;
+        min-height: 450px;
+        padding: 70px 8%;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    /* About */
+    .about {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 80px 8%;
+    }
+
+    /* Services */
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Location */
+    .location {
+        grid-template-columns: 1fr;
+        padding: 80px 8%;
+    }
+}
+
+
+/* Smartphones */
+@media (max-width: 600px) {
+
+    /* Navigatie */
+    nav {
+        height: auto;
+        min-height: 75px;
+        padding: 20px 6%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+    .hero {
+        min-height: 400px;
+        padding: 60px 7%;
+    }
+
+    .small-title,
+    .section-label {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.1;
+        letter-spacing: 1px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+
+    /* About */
+    .about {
+        width: 100%;
+        padding: 70px 7%;
+        gap: 35px;
+    }
+
+    .about h2,
+    .services h2,
+    .location h2 {
+        font-size: 32px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .about-card {
+        padding: 30px;
+    }
+
+
+    /* Services */
+    .services {
+        padding: 70px 7%;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-card {
+        padding: 30px 25px;
+    }
+
+
+    /* Location */
+    .location {
+        padding: 70px 7%;
+        gap: 30px;
+    }
+
+    .location-box {
+        padding: 25px;
+    }
+
+    .location-box span {
+        font-size: 32px;
+    }
+
+
+    /* Footer */
+    footer {
+        padding: 25px 15px;
+        font-size: 12px;
+    }
+
+
+    /* Over mij pagina */
+    .about-page {
+        padding: 60px 20px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-photo {
+        order: 1;
+    }
+
+    .about-content {
+        order: 2;
+    }
+
+    .photo-placeholder {
+        width: 250px;
+        height: 300px;
+    }
+
+    .about-content h1 {
+        font-size: 38px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+
+    /* Contact */
+    .contact_section {
+        padding: 40px 15px;
+    }
+
+    .contact_form {
+        padding: 30px 25px;
+    }
+
+    .contact_form::before {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+
+    .location-box {
+        padding: 15px;
+    }
+
+    .location-box iframe {
+        height: 300px;
+    }
+}
+
+
+/* Extra kleine smartphones */
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .about h2,
+    .services h2,
+    .location h2 {
+        font-size: 28px;
+    }
+
+    .photo-placeholder {
+        width: 220px;
+        height: 270px;
+    }
+}
+
+/* RESPONSIVE GOOGLE MAP */
+.location-box {
+    width: 100%;
+    padding: 20px;
+}
+
+.location-box > div {
+    width: 100%;
+}
+
+.location-box iframe {
+    width: 100%;
+    height: 400px;
+    display: block;
+    border: 0;
+    border-radius: 12px;
+}
